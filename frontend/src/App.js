@@ -13,16 +13,15 @@ class App extends Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <MainNavigation>
-            <main className="main-content">
-              <Switch>
-                <Redirect from="/" to="/auth" exact />
-                <Route path="/auth" component={AuthPage} />
-                <Route path="/bookings" component={BookingsPage} />
-                <Route path="/events" component={EventsPage} />
-              </Switch>
-            </main>
-          </MainNavigation>
+          <MainNavigation />
+          <main className="main-content">
+            <Switch>
+              <Redirect from="/" to="/auth" exact />
+              <Route path="/auth" component={AuthPage} />
+              <Route path="/events" component={EventsPage} />
+              <Route path="/bookings" component={BookingsPage} />
+            </Switch>
+          </main>
         </React.Fragment>
       </BrowserRouter>
     );
