@@ -9,10 +9,10 @@ const mainNavigation = props => (
     {context => {
       return (
         <header className="main-navigation">
-          <div className="main-navigation_logo">
-            <h1>Event Booking</h1>
+          <div className="main-navigation__logo">
+            <h1>EasyEvent</h1>
           </div>
-          <nav className="main-navigation_items">
+          <nav className="main-navigation__items">
             <ul>
               {!context.token && (
                 <li>
