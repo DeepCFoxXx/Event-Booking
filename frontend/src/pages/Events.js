@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Modal from "../components/Modal/Modal";
-import Backdrop from "../components/Backdrop/BackDrop";
+import Backdrop from "../components/Backdrop/Backdrop";
 import "./Events.css";
 
 class EventsPage extends Component {
@@ -33,11 +33,28 @@ class EventsPage extends Component {
             onCancel={this.modalCancelHandler}
             onConfirm={this.modalConfirmHandler}
           >
-            <p>Modal Content</p>
+            <form>
+              <div class="form-control">
+                <label htmlFor="title">Title</label>
+                <input type="text" id="title"></input>
+              </div>
+              <div class="form-control">
+                <label htmlFor="price">Price</label>
+                <input type="number" id="price"></input>
+              </div>
+              <div class="form-control">
+                <label htmlFor="date">Date</label>
+                <input type="date" id="date"></input>
+              </div>
+              <div class="form-control">
+                <label htmlFor="description">Description</label>
+                <textarea id="description" rows="4"></textarea>
+              </div>
+            </form>
           </Modal>
         )}
         <div className="events-control">
-          <p>Create Your Own Events</p>
+          <p>Share your own Events!</p>
           <button className="btn" onClick={this.startCreateEventHandler}>
             Create Event
           </button>
