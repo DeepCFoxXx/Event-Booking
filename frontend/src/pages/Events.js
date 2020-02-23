@@ -83,7 +83,7 @@ class EventsPage extends Component {
         return res.json();
       })
       .then(resData => {
-        this.fetchEvents;
+        this.fetchEvents();
       })
       .catch(err => {
         console.log(err);
